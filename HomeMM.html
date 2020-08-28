@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MADHUVAN MINERALS</title>
+    <link rel="icon" href="img/MMs.png" type="image/x-icon">
+    <style>
+        .hero {
+            position: absolute;
+            left: 3%;
+            top: 50%;
+        }
+
+        header {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(img/mining.jpg);
+            height: 100vh;
+            background-position: center;
+            background-size: cover;
+            background-attachment: fixed;
+            z-index: -1;
+        }
+
+        .hero h1 {
+            text-transform: uppercase;
+            /*    background: linear-gradient(to right, #fdfcfb 0%,  #e2d1c3 100%);*/
+            background-image: linear-gradient(to right, #43e97b 0%, #38f9d7 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+
+            font: {
+                size: 20vw;
+                family: $font;
+            }
+
+            ;
+            font-family: Georgia;
+            font-weight: 900;
+            font-size: 3.2vw;
+
+        }
+
+        .bgimg .container #img2 {
+            display: none;
+        }
+
+        .navbar-nav {
+            list-style: none;
+            float: right;
+        }
+
+        .nav-item {
+            font-size: 1.6vw;
+            padding-left: 10px;
+            font-family: sans;
+        }
+
+        @media (max-width: 990px) {
+            .navbar-nav {
+                background-color: #000;
+                float: none;
+                text-align: center;
+                padding: 10px;
+                z-index: 10;
+            }
+
+            .nav-item {
+                font-size: 3vw;
+            }
+
+            .hero h1 {
+                font-size: 5vw;
+                z-index: -10;
+            }
+
+            .bgimg .container #img {
+                display: none;
+            }
+
+            .bgimg .container #img2 {
+                display: block;
+                width: 20%;
+                margin-left: 5%;
+            }
+        }
+
+        /*box*/
+        .p1 p {
+            border: 0px solid;
+            border-left-width: 4px;
+            border-left-color: #333;;
+            padding: 0px 8px;
+            margin-left: 10%;
+            margin-top: 2%;
+            font-size: 30px;
+        }
+
+        .p2 {
+            font-family: 'Lato', sans-serif;
+            margin-left: 11%;
+            font-size: 20px;
+            line-height: 1.75;
+        }
+
+        #video0 {
+            width: 60%;
+            margin-top: 2%;
+            margin-left: 20%;
+            height: 50%;
+        }
+
+        #video0 a {
+            height: 30%;
+            position: absolute;
+            top: 35%;
+        }
+
+        #video1 {
+            width: 100%;
+        }
+
+        /*last_box*/
+        .last {
+            background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+            padding: 2%;
+            margin: 50px auto;
+            overflow: hidden;
+        }
+
+        .map {
+            padding: 10px;
+            width: 46%;
+            margin: 2%;
+            float: left;
+            text-align: center;
+        }
+
+        .map_info {
+            padding: 2%;
+        }
+
+        .map_info a {
+            font-family: sans-serif;
+            color: mediumseagreen;
+            text-decoration: none;
+        }
+
+        .map_info a:hover {
+            text-decoration: none;
+            color: lightseagreen;
+            transition: .3s;
+        }
+
+        .dealers {
+            padding: 10px;
+            width: 46%;
+            margin: 2%;
+            float: right;
+            text-align: center;
+        }
+
+        .dealers_info {
+            padding: 2%;
+        }
+
+        .dealers_info a {
+            font-family: sans-serif;
+            color: mediumseagreen;
+            text-decoration: none;
+        }
+
+        .dealers a:hover {
+            text-decoration: none;
+            color: lightseagreen;
+            transition: .3s;
+        }
+
+        /*popup*/
+        .container-fluid {
+            background: rgba(0, 0, 0, .8);
+            padding: 15px;
+            border: 1px solid black;
+            position: absolute;
+            width: 55%;
+            height: 60%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            overflow: auto;
+            visibility: hidden;
+            z-index: 9999;
+        }
+
+        .customdiv {
+            margin: 15px;
+            background-color: silver;
+            text-align: center;
+            min-height: 150px;
+            font-size: 18px;
+        }
+
+        .cut {
+            position: absolute;
+            top: 0;
+            right: 0;
+            padding: 3px 6px;
+        }
+
+        .cut i {
+            color: white;
+            font-size: 23px;
+            cursor: pointer;
+        }
+
+        .cut i:hover {
+            color: #4CAF50;
+            transition: .5s;
+        }
+
+    </style>
+
+    <script>
+        function mouseoverEvent(controlID) {
+            var control = document.getElementById(controlID);
+            control.style.transform = "scale(1.1)";
+            control.style.transition = ".4s";
+        }
+
+        function mouseoutEvent(controlID) {
+            var control = document.getElementById(controlID);
+            control.style.transform = "scale(1)";
+            control.style.transition = ".4s";
+        }
+
+    </script>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <header class="bgimg">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container">
+                <img src="img/MMs.png" id="img2">
+                <img src="img/MM.png" alt="" style="height: 90%;width: 20%" id="img">
+                <div class="button" style="margin-top: -30px;">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggler navigation">
+                        <span class="navbar-toggler-icon" style="font-size: 3vw;"></span>
+                    </button></div>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent" style="z-index: 50;">
+                    <ul class="navbar-nav ml-auto" style="font-family: ">
+                        <li class="nav-item active">
+                            <a href="#" class="nav-link" id="text0" style="color: #50C878;"><i class="fa fa-home" aria-hidden="true" style="font-size: 20px;margin: 5px"></i>Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="ProductsMM.html" class="nav-link" id="text0"><i class="fa fa-shopping-bag" aria-hidden="true" style="font-size: 20px;margin: 5px"></i>Products</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="Gallery.html" class="nav-link" id="text0"><i class="fa fa-picture-o" aria-hidden="true" style="font-size: 20px;margin: 5px"></i>Gallery</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="A2.html" class="nav-link" id="text0"><i class="fa fa-users" aria-hidden="true" style="font-size: 18px;margin: 5px"></i>About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#contact" class="nav-link" id="text0"><i class="fa fa-phone" aria-hidden="true" style="font-size: 18px;margin: 5px;"></i>Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="hero">
+            <h1>MADHUVAN MINERALS<br><span id="design" style="margin-left: 0;">& INDUSTRIES</span></h1>
+        </div>
+    </header>
+    <div class="box" style="width: 96%">
+        <div class="p1">
+            <p>Featured Stories
+            </p>
+        </div>
+        <p class="p2">
+            Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. </p>
+    </div>
+    <div class="video_slide" style="background-color: gainsboro;margin: 50px auto;padding-top: 1px; padding-bottom: 18px;">
+        <div class="carousel slide" data-interval="3000000" data-ride="carousel" id="video0">
+            <div class="carousel-inner" style="border: 1px solid white">
+                <div class="carousel-item active">
+                    <video controls id="video1">
+                        <source src="MM.mp4" type="video/mp4">
+                        <source src="movie.ogg" type="video/ogg">
+                        Your browser does not support the video tag.
+                    </video></div>
+                <div class="carousel-item">
+                    <video controls id="video1">
+                        <source src="MM.mp4" type="video/mp4">
+                        <source src="movie.ogg" type="video/ogg">
+                        Your browser does not support the video tag.
+                    </video></div>
+                <a href="#video0" class="carousel-control-next" data-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </a>
+                <a href="#video0" class="carousel-control-prev" data-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="box" style="width: 96%">
+        <div class="p1">
+            <p style="font-size: 20px;padding-left: 20px; " >There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.
+            </p>
+        </div>
+    </div>
+    <div class="last">
+        <div class="map">
+            <div class="map_img" id="map_img">
+                <a href="https://www.google.co.in/maps/place/madhuvan+minerals/@25.0954466,78.5194565,9z/data=!4m5!3m4!1s0x3978163ae4d28ce7:0x8bd98e407e058841!8m2!3d25.0047039!4d79.0327133" target="_blank" style=""> <img src="img/map.png" alt="" style="width: 20%" onmouseover="mouseoverEvent('map_img')" onmouseout="mouseoutEvent('map_img')"></a>
+            </div>
+            <div class="map_info">
+                <a href="https://www.google.co.in/maps/place/madhuvan+minerals/@25.0954466,78.5194565,9z/data=!4m5!3m4!1s0x3978163ae4d28ce7:0x8bd98e407e058841!8m2!3d25.0047039!4d79.0327133" target="_blank">
+                    <h2>Find Us</h2>
+                </a>
+            </div>
+        </div>
+        <div class="dealers">
+            <div class="dealers_img" id="dealers_img">
+                <a style=""><img src="img/dealers1.png" alt="" style="width: 22%" onmouseover="mouseoverEvent('dealers_img')" onmouseout="mouseoutEvent('dealers_img')" onclick="showme()"></a>
+            </div>
+            <div class="dealers_info">
+                <a href="">
+                    <h2>Dealers</h2>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-distributed" id="contact">
+        <div class="footer-left">
+            <div class="left1">
+                <i class="fa fa-map-marker"></i>
+                <span>
+                    <p>Madhuvan Minerals and Industries</p>
+                    <div class="add">
+                        <p style="margin-left: 18%;margin-top: -5%;">Jatara Tikamgarh,M.P</p><br>
+                    </div>
+                    <div>
+                        <p style="margin-left: 17%;margin-top: -2%;">Pin Code-472118</p>
+                    </div>
+                </span>
+            </div>
+            <div class="left2">
+                <div><i class="fa fa-phone"></i>
+                    <p>+91 9755421008</p><br>
+                    <p style="margin-left: 17%;margin-top: -5%;">+91 9425425468</p><br>
+                </div>
+            </div>
+            <div class="left3">
+                <i class="fa fa-envelope"></i>
+                <p><a href="#">himanshu@gmail.com</a></p>
+            </div>
+        </div>
+        <div class="footer-center">
+            <img src="img/MM.png" alt="" id="img">
+            <img src="img/MMs.png" id="img2">
+        </div>
+        <div class="footer-right">
+            <div class="footer-icons">
+                <div><a href="https://www.facebook.com" target="_blank" style="text-decoration: none;">
+                        <i class="fa fa-facebook" style=" background-color: #4267B2; color: white"></i>
+                        <p>facebook</p>
+                    </a></div>
+                <div><a href="https://www.twitter.com" target="_blank" style="text-decoration: none">
+                        <i class="fa fa-twitter" style=" background-color: white; color: deepskyblue"></i>
+                        <p>twitter</p>
+                    </a></div>
+                <div><a href="https://www.instagram.com" target="_blank" style="text-decoration: none">
+                        <i class="fa fa-instagram" style="background-color: white; color: #E1306C"></i>
+                        <p>instagram</p>
+                    </a></div>
+                <div><a href="https://www.linkedin.com" target="_blank" style="text-decoration: none">
+                        <i class="fa fa-linkedin" style=" background-color: dodgerblue; color: white"></i>
+                        <p>linkedin</p>
+                    </a></div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

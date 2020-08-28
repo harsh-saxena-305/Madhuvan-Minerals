@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pyrophillite</title>
+    <link rel="icon" href="img/MMs.png" type="image/x-icon">
+    <script>
+        function more1() {
+            var dots = document.getElementById("down1");
+            var moreText = document.getElementById("more1");
+            var btnText = document.getElementById("up1");
+            dots.style.display = "none";
+            btnText.style.display = "inline";
+            moreText.style.display = "inline-block";
+        }
+
+        function less1() {
+            var dots = document.getElementById("down1");
+            var moreText = document.getElementById("more1");
+            var btnText = document.getElementById("up1");
+            dots.style.display = "inline";
+            btnText.style.display = "none";
+            moreText.style.display = "none";
+        }
+
+        function more2() {
+            var dots = document.getElementById("down2");
+            var moreText = document.getElementById("more2");
+            var btnText = document.getElementById("up2");
+            dots.style.display = "none";
+            btnText.style.display = "inline-block";
+            moreText.style.display = "inline";
+        }
+
+        function less2() {
+            var dots = document.getElementById("down2");
+            var moreText = document.getElementById("more2");
+            var btnText = document.getElementById("up2");
+            dots.style.display = "inline";
+            btnText.style.display = "none";
+            moreText.style.display = "none";
+        }
+
+        function more3() {
+            var dots = document.getElementById("down3");
+            var moreText = document.getElementById("more3");
+            var btnText = document.getElementById("up3");
+            dots.style.display = "none";
+            btnText.style.display = "inline";
+            moreText.style.display = "inline-block";
+        }
+
+        function less3() {
+            var dots = document.getElementById("down3");
+            var moreText = document.getElementById("more3");
+            var btnText = document.getElementById("up3");
+            dots.style.display = "inline";
+            btnText.style.display = "none";
+            moreText.style.display = "none";
+        }
+    </script>
+
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        #img3 {
+            margin-top: 1%;
+            width: 100%;
+        }
+
+        .no-padding {
+            padding-left: 0px !important;
+            padding-right: 0px !important;
+        }
+
+        .no-padding:hover {
+            transform: scale(1.02);
+            transition: .5s;
+        }
+
+        .contentpyro .p1 {
+            font-family: 'Lato', sans-serif;
+            margin-left: 42%;
+            margin-top: 2%;
+            font-size: 35px;
+            text-align: justify;
+        }
+
+        .contentpyro hr {
+            width: 200px;
+            margin-left: 41%;
+            background-color: cyan;
+            height: 3px;
+        }
+
+        .contentpyro .p2 {
+            text-align: justify;
+            margin-left: 5%;
+            margin-right: 5%;
+            font-family: 'Lato', sans-serif;
+            font-size: 20px;
+            line-height: 1.75;
+        }
+
+        .gradeA {
+            margin-top: 2%;
+            padding: 0px;
+            width: 100%;
+            height: auto;
+            background-color: gainsboro;
+        }
+
+        .gradeAleft .p1 p {
+            border: 0px solid;
+            border-left-width: 4px;
+            border-left-color: #01dbf5;
+            padding: 0px 8px;
+            margin-left: 10%;
+            margin-top: 2%;
+            font-size: 30px;
+        }
+
+        .gradeAright .carousel {
+            margin: 2% 0%;
+            padding: 0px 0px 10px 0px;
+        }
+
+        .gradeA .p2,
+        .gradeC .p2 {
+            font-family: 'Lato', sans-serif;
+            margin-left: 12%;
+            font-size: 20px;
+            line-height: 1.75;
+        }
+
+        .gradeB {
+            margin-top: 3%;
+            padding: 0px;
+            width: 100%;
+            height: auto;
+        }
+
+        .gradeB .carousel {
+            margin-left: 10%;
+            padding: 0px 0px 10px 0px;
+        }
+
+        .gradeB .p2 {
+            font-family: 'Lato', sans-serif;
+            font-size: 20px;
+            line-height: 1.75;
+            margin-left: 2%;
+        }
+
+
+        .gradeBright .p1 p {
+            border: 0px solid;
+            border-left-width: 4px;
+            border-left-color: #01dbf5;
+            padding: 0px 8px;
+            margin-top: 2%;
+            font-size: 30px;
+        }
+
+
+        .gradeC {
+            margin-top: 3%;
+            padding: 0px;
+            width: 100%;
+            height: auto;
+            background-color: gainsboro;
+        }
+
+        .carousel-item img {
+            height: 100%;
+            width: 100%;
+        }
+
+        .carousel .carousel-indicators {
+            margin-bottom: 1%;
+        }
+
+        @media(max-width:990px) {
+
+            .gradeAright .carousel,
+            .gradeCright .carousel {
+                margin-left: 8%;
+            }
+
+            .contentpyro .p1 {
+                margin-left: 30%;
+                margin-top: 2%;
+                font-size: 4.8vw;
+            }
+
+            .contentpyro .p2 {
+                font-size: 3vw;
+            }
+
+            .gradeA .p2,
+            .gradeB .p2,
+            .gradeC .p2 {
+                font-size: 3vw;
+            }
+
+            #more1,
+            #more2,
+            #more3 {
+                font-size: 3vw;
+            }
+
+            .gradeA .p1,
+            .gradeB .p1,
+            .gradeC .p1 {
+                font-size: 3.5vw;
+            }
+
+            .contentpyro hr {
+                width: 200px;
+                margin-left: 30%;
+            }
+        }
+
+        @media(max-width:750px) {
+            .contentpyro hr {
+                width: 150px;
+                margin-left: 28%;
+            }
+        }
+    </style>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <div class="header">
+        <div class="img1">
+            <img src="img/MMs.png" id="img2" style="height: 90%;width: 100%">
+            <img src="img/MM.png" alt="" style="height: 90%;width: 100%" id="img"></div>
+        <input type="checkbox" id="chk">
+        <label for="chk" class="show-menu-btn">
+            <i class="fas fa-ellipsis-h"></i>
+        </label>
+        <div class="menu">
+            <ul class="menu1">
+                <a href="HomeMM.html"><i class="fa fa-home" aria-hidden="true" style="font-size: 20px;padding: 5px;"></i><span>Home</span></a>
+                <a href="ProductsMM.html" style="color: #50C878;"><i class="fa fa-shopping-bag" aria-hidden="true" style="font-size: 20px;margin: 5px"></i><span>Products</span></a>
+                <a href="Gallery.html"><i class="fa fa-picture-o" aria-hidden="true" style="font-size: 20px;margin: 5px"></i><span>Gallery</span></a>
+                <a href="A2.html"><i class="fa fa-users" aria-hidden="true" style="font-size: 18px;margin: 5px"></i><span>About Us</span></a>
+                <a href="#contact"><i class="fa fa-phone" aria-hidden="true" style="font-size: 18px;margin: 5px"></i><span>Contact Us</span></a>
+                <label for="chk" class="hide-menu-btn">
+                    <i class="fas fa-times"></i>
+                </label>
+            </ul>
+        </div>
+    </div>
+    <div class="row" id="img3" style="margin-left: 0px;">
+        <div class="col-xs-4 no-padding">
+            <img src="img/mines1.jpg" alt="" height="100%" width="100%"></div>
+        <div class="col-xs-4 no-padding">
+            <img src="img/mines2.jpg" alt="" height="100%" width="100%"></div>
+        <div class="col-xs-4 no-padding">
+            <img src="img/mines3.jpg" alt="" height="100%" width="100%"></div>
+    </div>
+    <div class="contentpyro">
+        <p class="p1">Pyrophillite</p>
+        <hr>
+        <p class="p2"><b>Pyrophyllite </b>is a phyllosilicate mineral composed of aluminium silicate hydroxide: <mark style="background-color: white;color: #01dbf5;">Al2Si4O10(OH)2</mark>. It occurs in two forms (habits): crystalline folia and compact masses; distinct crystals are not known.
+            The folia have a pronounced pearly luster, owing to the presence of a perfect cleavage parallel to their surfaces: they are flexible but not elastic, and are usually arranged radially in fan-like or spherical groups. This variety, when heated , exfoliates and swells up to many times its original volume.
+
+        </p>
+    </div>
+    <div class="gradeA" id="a">
+        <div class="row container-fluid">
+            <div class="col-lg-7 col-sm-12">
+                <div class="gradeAleft" style="height: 100%;">
+                    <div class="p1">
+                        <p>Grade A
+                        </p>
+                    </div>
+                    <p class="p2">
+                        Grade-A Pyrophillite is the high quality of pyrophillite and it is higher in rate.The mining industry is considered a major contributor to the growth of the Indian economy. Pyrophyllite is isomorphous with the common mineral Talc, but has aluminum in place of the magnesium. It is very similar to Talc, with very similar properties and habits.</p>
+                    <div id="down1" onclick="more1()" style="margin-left: 50%;font-size: 35px;cursor: pointer">
+                        <i class="fa fa-chevron-circle-down"></i></div>
+                    <p id="more1" style="
+                    display: none; font-family: 'Lato', sans-serif; margin-left: 12%; font-size: 20px; line-height: 1.75;">The mining business unit of the Adani group was established in 2007 as the last isque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet.</p>
+                    <div id="up1" onclick="less1()" style="margin-left: 50%;font-size: 35px;cursor: pointer;display: none">
+                        <i class="fa fa-chevron-circle-up"></i></div>
+                </div>
+            </div>
+            <div class="col-lg-5 col-sm-12">
+                <div class="gradeAright" style="height: 200%;">
+                    <div class="carousel slide" data-ride="carousel" data-interval="3000" id="slide" data-pause="hover">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="img/mines1.jpg">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/mines10.jpg">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/mines11.jpg">
+                            </div>
+                        </div>
+                        <a href="#slide" class="carousel-control-next" data-slide="next">
+                        </a>
+                        <a href="#slide" class="carousel-control-prev" data-slide="prev">
+                        </a>
+                        <ul class="carousel-indicators">
+                            <li data-target="#slide" data-slide-to="0" class="active"></li>
+                            <li data-target="#slide" data-slide-to="1"></li>
+                            <li data-target="#slide" data-slide-to="2"></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="gradeB">
+        <div class="row container-fluid">
+            <div class="col-lg-5 col-sm-12">
+                <div class="gradeBleft" style="height: 100%;">
+                    <div class="carousel slide" data-ride="carousel" data-interval="3000" id="slide" data-pause="hover">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="img/mines7.jpg">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/mines2.jpg">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/mines3.jpg">
+                            </div>
+                        </div>
+                        <a href="#slide" class="carousel-control-next" data-slide="next">
+                        </a>
+                        <a href="#slide" class="carousel-control-prev" data-slide="prev">
+                        </a>
+                        <ul class="carousel-indicators">
+                            <li data-target="#slide" data-slide-to="0" class="active"></li>
+                            <li data-target="#slide" data-slide-to="1"></li>
+                            <li data-target="#slide" data-slide-to="2"></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-7 col-sm-12">
+                <div class="gradeBright" style="width: 100%; height: 100%;">
+                    <div class="p1">
+                        <p>Grade B
+                        </p>
+                    </div>
+                    <p class="p2">Grade-B Pyrophillite is the high quality of pyrophillite and it is higher in rate.
+                        The mining industry is considered a major contributor to the growth of the Indian economy. The mining business unit of the Adani group was established in 2007 as the last link in ensuring energy security for India.</p>
+                    <div id="down2" onclick="more2()" style="margin-left: 50%;font-size: 35px;cursor: pointer;">
+                        <i class="fa fa-chevron-circle-down"></i></div>
+                    <p id="more2" style="
+                    display: none; font-family: 'Lato', sans-serif; font-size: 20px; line-height: 1.75;">The mining business unit of the Adani group was established in 2007 as the last isque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet.</p>
+                    <div id="up2" onclick="less2()" style="margin-left: 50%;font-size: 35px;cursor: pointer;display: none">
+                        <i class="fa fa-chevron-circle-up"></i></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="gradeC">
+        <div class="row container-fluid">
+            <div class="col-lg-7 col-sm-12">
+                <div class="gradeAleft" style="height: 100%;">
+                    <div class="p1">
+                        <p>Grade C
+                        </p>
+                    </div>
+                    <p class="p2">Grade-B Pyrophillite is the high quality of pyrophillite and <br> it is higher in rate.
+                        The mining industry is considered a major contributor to the growth of the Indian economy. The mining business unit of the Adani group was established in 2007 as the last link in ensuring energy security for India.</p>
+                    <div id="down3" onclick="more3()" style="margin-left: 50%;font-size: 35px;cursor: pointer;">
+                        <i class="fa fa-chevron-circle-down"></i></div>
+                    <p id="more3" style="
+                    display: none; font-family: 'Lato', sans-serif; margin-left: 12%; font-size: 20px; line-height: 1.75;">The mining business unit of the Adani group was established in 2007 as the last isque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet.</p>
+                    <div id="up3" onclick="less3()" style="margin-left: 50%;font-size: 35px;cursor: pointer;display: none">
+                        <i class="fa fa-chevron-circle-up"></i></div>
+                </div>
+            </div>
+
+            <div class="col-lg-5 col-sm-12">
+                <div class="gradeCright" style="height: 200%;">
+                    <div class="carousel slide" data-ride="carousel" data-interval="3000" id="slide" data-pause="hover">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="img/mines4.jpg">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/mines5.jpg">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/mines6.jpg">
+                            </div>
+                        </div>
+                        <a href="#slide" class="carousel-control-next" data-slide="next">
+                        </a>
+                        <a href="#slide" class="carousel-control-prev" data-slide="prev">
+                        </a>
+                        <ul class="carousel-indicators">
+                            <li data-target="#slide" data-slide-to="0" class="active"></li>
+                            <li data-target="#slide" data-slide-to="1"></li>
+                            <li data-target="#slide" data-slide-to="2"></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-distributed" id="contact">
+        <div class="footer-left">
+            <div class="left1">
+                <i class="fa fa-map-marker"></i>
+                <span>
+                    <p>Madhuvan Minerals and Industries</p>
+                    <div class="add">
+                        <p style="margin-left: 18%;margin-top: -5%;">Jatara Tikamgarh,M.P</p><br>
+                    </div>
+                    <div>
+                        <p style="margin-left: 17%;margin-top: -2%;">Pin Code-472118</p>
+                    </div>
+                </span>
+            </div>
+            <div class="left2">
+                <div><i class="fa fa-phone"></i>
+                    <p>+91 9755421008</p><br>
+                    <p style="margin-left: 17%;margin-top: -5%;">+91 9425425468</p><br>
+                </div>
+            </div>
+            <div class="left3">
+                <i class="fa fa-envelope"></i>
+                <p><a href="#">himanshu@gmail.com</a></p>
+            </div>
+        </div>
+        <div class="footer-center">
+            <img src="img/MM.png" alt="" id="img">
+            <img src="img/MMs.png" id="img2">
+        </div>
+        <div class="footer-right">
+            <div class="footer-icons">
+                <div><a href="https://www.facebook.com" target="_blank" style="text-decoration: none;">
+                        <i class="fa fa-facebook" style=" background-color: #4267B2; color: white"></i>
+                        <p>facebook</p>
+                    </a></div>
+                <div><a href="https://www.twitter.com" target="_blank" style="text-decoration: none">
+                        <i class="fa fa-twitter" style=" background-color: white; color: deepskyblue"></i>
+                        <p>twitter</p>
+                    </a></div>
+                <div><a href="https://www.instagram.com" target="_blank" style="text-decoration: none">
+                        <i class="fa fa-instagram" style="background-color: white; color: #E1306C"></i>
+                        <p>instagram</p>
+                    </a></div>
+                <div><a href="https://www.linkedin.com" target="_blank" style="text-decoration: none">
+                        <i class="fa fa-linkedin" style=" background-color: dodgerblue; color: white"></i>
+                        <p>linkedin</p>
+                    </a></div>
+            </div>
+        </div>
+    </div>
+</body></html>
